@@ -11,7 +11,7 @@ const server = http.createServer(app);
 
 const io = new Server(server, {
   cors: {
-    origin: "http://localhost:3000", // React app
+    origin: "https://elegant-rabanadas-0c35c4.netlify.app/", // React app
     methods: ["GET", "POST"],
   },
 });
