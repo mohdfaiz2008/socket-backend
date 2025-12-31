@@ -4,6 +4,7 @@ import { Server } from "socket.io";
 import cors from 'cors';
 
 const app = express();
+const PORT = process.env.PORT || 3000;
 app.use(cors());
 
 const server = http.createServer(app);
@@ -28,6 +29,6 @@ io.on("connection", (socket) => {
   });
 });
 
-server.listen(5000, () => {
+server.listen(PORT, () => {
   console.log("Server running on port 5000");
 });
